@@ -12,6 +12,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 from binance.client import Client
+from binance.enums import *
 
 # =============== Config & Secrets ===============
 def _get_secret(name: str, default: str = "") -> str:
@@ -27,7 +28,8 @@ TESTNET_URL = "https://testnet.binance.vision"
 @st.cache_resource(show_spinner=False)
 def get_client() -> Client:
     base_url = TESTNET_URL if USE_TESTNET else "https://api.binance.com"
-    return Client(api_key=API_KEY, api_secret=API_SECRET)
+    client = Client(api_key=API_KEY, api_secret=API_SECRET)
+    return client
 
 # =============== Data helpers ===============
 @st.cache_data(show_spinner=False, ttl=60)
