@@ -11,7 +11,7 @@ from typing import Dict, Any, Tuple
 import numpy as np
 import pandas as pd
 import streamlit as st
-from binance.spot import Spot
+from binance.client import Client
 
 # =============== Config & Secrets ===============
 def _get_secret(name: str, default: str = "") -> str:
