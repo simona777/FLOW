@@ -1,0 +1,36 @@
+# --- Fișiere sensibile ---
+.env
+.streamlit/secrets.toml
+
+# --- Medii virtuale ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- Cache & compilate ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.db
+
+# --- Config / logs ---
+*.log
+*.csv
+*.tmp
+
+# --- Streamlit cache ---
+.streamlit/cache/
+.streamlit/config.toml
+
+# --- macOS ---
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# --- Editor temporar ---
+.idea/
+.vscode/
+*.code-workspace
