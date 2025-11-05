@@ -27,8 +27,8 @@ TESTNET_URL = "https://testnet.binance.vision"
 @st.cache_resource(show_spinner=False)
 def get_client() -> Spot:
     base = TESTNET_URL if USE_TESTNET else "https://api.binance.com"
-    return Spot(key=API_KEY or None, secret=API_SECRET or None, base_url=base)
-
+    return Spot(api_key=API_KEY or None, api_secret=API_SECRET or None, base_url=base)
+    
 # =============== Data helpers ===============
 @st.cache_data(show_spinner=False, ttl=60)
 def fetch_klines(symbol: str, interval: str, limit: int = 500) -> pd.DataFrame:
